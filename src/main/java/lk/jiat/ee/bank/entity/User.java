@@ -8,11 +8,31 @@ import java.util.List;
 
 @Entity
 @Table(name = "users")
+@NamedQueries({
+        @NamedQuery(name = "User.FindByEmail",query = "select u from  User u where u.email=:email"),
+        @NamedQuery(name = "User.FindByEmailAndPassword",query = "select u from  User u where u.email=:email and  u.password=:password" )
+})
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
+    public List<Account> getAccounts() {
+        return accounts;
+    }
+    public User(){}
+    public User( String name, String email, String password) {
+
+        this.name = name;
+        this.email = email;
+        this.password = password;
+    }
+
+    public void setAccounts(List<Account> accounts) {
+        this.accounts = accounts;
+    }
+
     private String name;
     private String email;
 

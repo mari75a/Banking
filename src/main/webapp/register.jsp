@@ -11,7 +11,25 @@
     <title>Register</title>
 </head>
 <body>
-<a href="login.jsp"/>
-<a href="register.jsp"/>
+<form action="register" method="post">
+    <table>
+        <tr>
+            <th>Name</th>
+            <td><input type="text" name="name" value=""></td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td><input type="text" name="email" value=""></td>
+        </tr>
+        <tr>
+            <th>password</th>
+            <td><input type="password" name="password" value=""></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="button" name="submit" value="Register"></td>
+        </tr>
+    </table>
+</form>
 </body>
 </html>
