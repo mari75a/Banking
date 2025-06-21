@@ -23,5 +23,6 @@ private RegisterService registerService;
         String password= req.getParameter("password");
 
         registerService.registerUser(name, email, password);
+        resp.sendRedirect("login.jsp");
     }
 }

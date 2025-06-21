@@ -11,20 +11,20 @@
     <title>Login</title>
 </head>
 <body>
-<form action="login" method="post">
+<form action="http://localhost:8080/jta_bank/login" method="post">
     <table>
 
         <tr>
             <th>Email</th>
-            <td><input type="text" name="email" value=""></td>
+            <td><input type="text" name="name" ></td>
         </tr>
         <tr>
             <th>password</th>
-            <td><input type="password" name="password" value=""></td>
+            <td><input type="password" name="password" ></td>
         </tr>
         <tr>
             <td></td>
-            <td><input type="button" name="submit" value="Register"></td>
+            <td><input type="submit" name="submit" value="Register"></td>
         </tr>
     </table>
 </form>

@@ -14,11 +14,18 @@ public class LoginServiceBean implements LoginService {
 
     @Override
     public boolean login(String email, String password) {
-    User user=    em.createNamedQuery("User.FindByEmailAndPassword", User.class)
-                .setParameter("email", email)
-                .setParameter("password", password)
-                .getSingleResult();
 
-        return user != null;
+        try {
+            User user=    em.createNamedQuery("User.FindByEmailAndPassword", User.class)
+                    .setParameter("email", email)
+                    .setParameter("password", password)
+                    .getSingleResult();
+
+            return true;
+        } catch (Exception e) {
+            
+            return false;
+        }
+
     }
 }
